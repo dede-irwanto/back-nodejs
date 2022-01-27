@@ -1,0 +1,24 @@
+{
+  "name": "back-nodejs",
+  "version": "1.0.0",
+  "description": "REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dede-irwanto/restapi.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "Dede Irwanto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dede-irwanto/restapi/issues"
+  },
+  "homepage": "https://github.com/dede-irwanto/restapi#readme"
+}
