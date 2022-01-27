@@ -11,7 +11,7 @@ exports.registrasi = function (req, res) {
   var post = {
     username: req.body.username,
     email: req.body.email,
-    password: req.body.password,
+    password: md5(req.body.password),
     role: req.body.role,
     tanggal_daftar: new Date(),
   };
@@ -40,4 +40,16 @@ exports.registrasi = function (req, res) {
       }
     }
   });
+};
+
+// controller login
+exports.login = function (req, res) {
+  var post = {
+    password: req.body.password,
+    email: req.body.email,
+  };
+  var query = "SELECT * FROM ?? WHERE ??=? AND ??=?";
+  var table = ["user", "password", md(post.password), "email", post.email];
+
+  query = mysql.format(query, table);
 };
