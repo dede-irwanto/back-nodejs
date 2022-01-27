@@ -6,4 +6,5 @@ module.exports = function (app) {
   app.route("/tampil/:id").get(jsonku.tampilberdasarkanid);
   app.route("/tambah").post(jsonku.tambahMahasiswa);
   app.route("/ubah/:id_mahasiswa").put(jsonku.ubahMahasiswa);
+  app.route("/hapus/:id_mahasiswa").delete(jsonku.hapusMahasiswa);
 };
