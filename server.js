@@ -1,6 +1,6 @@
 const bodyParser = require("body-parser");
 const express = require("express");
-bodyParser;
+const cors = require("cors");
 var morgan = require("morgan");
 const app = express();
 
@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan("dev"));
+app.use(cors());
 
 // daftarkan menu routes dari index
 app.use("/auth", require("./middleware"));
@@ -17,5 +18,5 @@ var routes = require("./routes");
 routes(app);
 
 app.listen(3001, () => {
-  console.log(`Server started on port 3000`);
+  console.log(`Server started on port 3001`);
 });
