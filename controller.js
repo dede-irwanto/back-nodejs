@@ -53,7 +53,7 @@ exports.tambahMahasiswa = function (req, res) {
 
 // ubah data mahasiswa berdasarkan id
 exports.ubahMahasiswa = function (req, res) {
-  var id_mahasiswa = req.params.id_mahasiswa;
+  var id_mahasiswa = req.body.id_mahasiswa;
   var nim = req.body.nim;
   var nama = req.body.nama;
   var jurusan = req.body.jurusan;
@@ -72,7 +72,7 @@ exports.ubahMahasiswa = function (req, res) {
 
 // delete data mahasiswa
 exports.hapusMahasiswa = function (req, res) {
-  var id_mahasiswa = req.params.id_mahasiswa;
+  var id_mahasiswa = req.body.id_mahasiswa;
   connection.query(
     "DELETE FROM mahasiswa WHERE id_mahasiswa=?",
     [id_mahasiswa],
